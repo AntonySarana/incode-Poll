@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e47b269-5ea4-4746-83fb-9f7986dbeb0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/SignIn/SignIn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/SignUp/SignUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Verify/Verify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dashboard.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -96,11 +94,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/routes/dashboard.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-90">
-                  <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+                <state relative-caret-position="315">
+                  <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#502#560#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -117,7 +118,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/views/SignIn/SignIn.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="468">
@@ -191,9 +192,9 @@
         <option value="$PROJECT_DIR$/src/views/SignUp/SignUp.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/routes/dashboard.jsx" />
         <option value="$PROJECT_DIR$/src/views/Verify/Verify.js" />
         <option value="$PROJECT_DIR$/src/views/SignIn/SignIn.js" />
+        <option value="$PROJECT_DIR$/src/routes/dashboard.jsx" />
       </list>
     </option>
   </component>
@@ -284,12 +285,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537782213123</updated>
-      <workItem from="1537782214236" duration="7433000" />
+      <workItem from="1537782214236" duration="7817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7433000" />
+    <option name="totallyTimeSpent" value="7817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -297,10 +298,10 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14246725" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.14246725" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.33054394" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.33054394" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -448,13 +449,6 @@
     <entry file="file://$PROJECT_DIR$/.eslintrc.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/dashboard.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Verify/Verify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -471,6 +465,16 @@
           <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
           <folding>
             <element signature="e#53#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/dashboard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#502#560#0" expanded="true" />
           </folding>
         </state>
       </provider>
