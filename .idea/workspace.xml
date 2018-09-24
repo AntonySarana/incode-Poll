@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e47b269-5ea4-4746-83fb-9f7986dbeb0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/PollList/PollList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard/Dashboard2.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,6 +29,7 @@
           <entry key="js" value="7" />
           <entry key="json" value="1" />
           <entry key="jsx" value="18" />
+          <entry key="md" value="2" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
@@ -44,6 +40,7 @@
           <entry key="JSON" value="1" />
           <entry key="JSX Harmony" value="18" />
           <entry key="JavaScript" value="7" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="1" />
           <entry key="TypeScript JSX" value="1" />
         </counts>
@@ -60,6 +57,7 @@
           <entry key="js" value="2548" />
           <entry key="json" value="5" />
           <entry key="jsx" value="112" />
+          <entry key="md" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -68,6 +66,7 @@
           <entry key="JSON" value="5" />
           <entry key="JSX Harmony" value="112" />
           <entry key="JavaScript" value="2548" />
+          <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -85,14 +84,28 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/views/Dashboard/Dashboard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+                <state relative-caret-position="498">
+                  <caret line="88" column="23" lean-forward="true" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
                   <folding>
                     <element signature="e#53#114#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
                 </state>
               </provider>
             </entry>
@@ -176,6 +189,7 @@
         <option value="$PROJECT_DIR$/src/views/SignUp/SignUp.js" />
         <option value="$PROJECT_DIR$/src/components/PollList/PollList.js" />
         <option value="$PROJECT_DIR$/src/views/Dashboard/Dashboard.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -285,12 +299,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537782213123</updated>
-      <workItem from="1537782214236" duration="13575000" />
+      <workItem from="1537782214236" duration="13980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13575000" />
+    <option name="totallyTimeSpent" value="13980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -494,11 +508,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Dashboard/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+        <state relative-caret-position="498">
+          <caret line="88" column="23" lean-forward="true" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
           <folding>
             <element signature="e#53#114#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
