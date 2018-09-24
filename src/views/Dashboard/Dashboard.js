@@ -10,7 +10,7 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
-import PollList from "../../components/PollList/PollList.js";
+import QouteItem from "../../components/QuoteItem/QouteItem.js";
 
 const styles = {
   cardCategoryWhite: {
@@ -83,7 +83,7 @@ class Dashboard extends React.Component {
                     dataNotVoted.map((item, key) => {
                       return (
                         <GridItem xs={12} sm={2} md={8}>
-                          <PollList data={item} key={key} />
+                          <QouteItem data={item} key={key} />
                         </GridItem>
                       );
                     })}
@@ -91,7 +91,7 @@ class Dashboard extends React.Component {
                     dataVoted.map((item, key) => {
                       return (
                         <GridItem xs={12} sm={12} md={8}>
-                          <PollList data={item} key={key} />
+                          <QouteItem data={item} key={key} />
                         </GridItem>
                       );
                     })}

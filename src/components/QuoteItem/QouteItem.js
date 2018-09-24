@@ -28,7 +28,7 @@ const styles = {
 };
 
 
-function PollList (props) {
+function QouteItem (props) {
   const { classes, data } = props;
   return (
     <div>
@@ -45,4 +45,4 @@ function PollList (props) {
     </div>
   )
 }
-export default withStyles(styles)(PollList);
+export default withStyles(styles)(QouteItem);
