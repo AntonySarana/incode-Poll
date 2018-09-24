@@ -8,8 +8,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 // core components/views
-import DashboardPage from "views/Dashboard/Dashboard.jsx";
-import UserProfile from "views/UserProfile/UserProfile.jsx";
+import DashboardPage from "views/Dashboard/Dashboard.js";
 import SignUp from "views/SignUp/SignUp.js";
 import SignIn from "views/SignIn/SignIn.js";
 import Verify from "views/Verify/Verify.js";
@@ -21,13 +20,6 @@ const dashboardRoutes = [
     navbarName: "Material Dashboard",
     icon: Dashboard,
     component: DashboardPage
-  },
-  {
-    path: "/user",
-    sidebarName: "User Profile",
-    navbarName: "Profile",
-    icon: Person,
-    component: UserProfile
   },
   {
     path: "/SignUp",
