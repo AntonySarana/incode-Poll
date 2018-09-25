@@ -8,10 +8,11 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 // core components/views
-import DashboardPage from "views/Dashboard/Dashboard.js";
+import DashboardPage from "../views/Dashboard/Dashboard.js";
 import SignUp from "views/SignUp/SignUp.js";
 import SignIn from "views/SignIn/SignIn.js";
 import Verify from "views/Verify/Verify.js";
+import CreatePoll from "views/CreatePoll/CreatePoll.js";
 
 const dashboardRoutes = [
   {
@@ -41,6 +42,13 @@ const dashboardRoutes = [
     navbarName: "Profile",
     icon: Person,
     component: Verify,
+  },
+  {
+    path: "/CreatePoll",
+    sidebarName: "CreatePoll",
+    navbarName: "CreatePoll",
+    icon: Person,
+    component: CreatePoll,
   },
 
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }

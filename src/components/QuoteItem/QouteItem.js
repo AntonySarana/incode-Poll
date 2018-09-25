@@ -3,8 +3,9 @@ import React from "react";
 // import vsyakoy figni
 
 import withStyles from "@material-ui/core/styles/withStyles";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
+import GridItem from "components/Grid/GridItem.jsx";
+import GridContainer from "components/Grid/GridContainer.jsx";
+
 import Button from "components/CustomButtons/Button.jsx";
 
 
@@ -31,18 +32,16 @@ const styles = {
 function QouteItem (props) {
   const { classes, data } = props;
   return (
-    <div>
-      <Card>
-            <CardBody>
-              <p>
+    <React.Fragment>
+      <GridContainer>
+        <GridItem xs={12} sm={2} md={12}>
                 <Button
                   color="gray"
+                  fullWidth={true}
                 >{data}</Button>
-              </p>
-            </CardBody>
-          </Card>
-
-    </div>
+        </GridItem>
+      </GridContainer>
+    </React.Fragment>
   )
 }
 export default withStyles(styles)(QouteItem);

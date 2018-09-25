@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 
 // import vsyakoy figni
 
@@ -11,6 +13,10 @@ import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import QouteItem from "../../components/QuoteItem/QouteItem.js";
+import Table from "@material-ui/core/Table";
+import TableCell from "@material-ui/core/TableCell";
+import TableRow from "@material-ui/core/TableRow";
+
 
 const styles = {
   cardCategoryWhite: {
@@ -51,7 +57,9 @@ class Dashboard extends React.Component {
       <div>
         <GridContainer>
           <GridItem xs={12} sm={2} md={10}>
-            <Button color="primary">Add New POll</Button>
+            <NavLink to={"/CreatePoll"}>
+              <Button color="primary">Add New Poll</Button>
+            </NavLink>
           </GridItem>
           <GridItem xs={12} sm={10} md={10}>
             <Card>
@@ -82,16 +90,29 @@ class Dashboard extends React.Component {
                   {isViewNew &&
                     dataNotVoted.map((item, key) => {
                       return (
-                        <GridItem xs={12} sm={2} md={8}>
-                          <QouteItem data={item} key={key} />
+                        <GridItem xs={12} sm={2} md={12}>
+                          <Table>
+                            <TableRow>
+                              <TableCell>
+                                <QouteItem data={item} key={key} />
+                              </TableCell>
+                            </TableRow>
+                          </Table>
                         </GridItem>
                       );
                     })}
+
                   {!isViewNew &&
                     dataVoted.map((item, key) => {
                       return (
-                        <GridItem xs={12} sm={12} md={8}>
-                          <QouteItem data={item} key={key} />
+                        <GridItem xs={12} sm={2} md={12}>
+                          <Table>
+                            <TableRow>
+                              <TableCell>
+                                <QouteItem data={item} key={key} />
+                              </TableCell>
+                            </TableRow>
+                          </Table>
                         </GridItem>
                       );
                     })}
