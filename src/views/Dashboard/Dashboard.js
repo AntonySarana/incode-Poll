@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-
 // import vsyakoy figni
 
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -16,7 +15,7 @@ import QouteItem from "../../components/QuoteItem/QouteItem.js";
 import Table from "@material-ui/core/Table";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
-
+import connect from "react-redux/es/connect/connect";
 
 const styles = {
   cardCategoryWhite: {
@@ -46,9 +45,26 @@ class Dashboard extends React.Component {
       isViewNew: true
     };
   }
+  componentDidMount() {
+    this.onFilterClick();
+  }
+
   onFilterClick = () => {
     let isViewNew = !this.state.isViewNew;
-    this.setState({ isViewNew });
+
+    // --- pri poyavlenii BD
+    /*let polls = this.props.polls
+    let voted = this.props.user.pollVoted // - massiv ID vsex progolosovannix
+    let dataVoted=[];
+    let dataNotVoted=[];
+    polls.map(poll=>{
+      voted.map(id => {
+        if (poll.id === id) return dataVoted.push(poll)
+        else return dataNotVoted.push(poll);
+      })
+    })*/
+
+    this.setState({ isViewNew /*dataVoted,dataNotVoted,*/ });
   };
   render() {
     const { classes } = this.props;
@@ -67,18 +83,18 @@ class Dashboard extends React.Component {
                 <GridContainer>
                   <GridItem xs={12} sm={12} md={6}>
                     <Button
-                      color={`${isViewNew ? "primary" : "gray"}`}
+                      color={`${isViewNew ? "gray" : "primary"}`}
                       onClick={this.onFilterClick}
-                      disabled={!isViewNew}
+                      disabled={isViewNew}
                     >
                       Not voted polls
                     </Button>
                   </GridItem>
                   <GridItem xs={12} sm={12} md={6}>
                     <Button
-                      color={`${!isViewNew ? "primary" : "gray"}`}
+                      color={`${isViewNew ? "primary" : "gray"}`}
                       onClick={this.onFilterClick}
-                      disabled={isViewNew}
+                      disabled={!isViewNew}
                     >
                       Voted polls
                     </Button>
@@ -103,6 +119,7 @@ class Dashboard extends React.Component {
                     })}
 
                   {!isViewNew &&
+                    /*this.props.polls.map....*/
                     dataVoted.map((item, key) => {
                       return (
                         <GridItem xs={12} sm={2} md={12}>
@@ -118,22 +135,6 @@ class Dashboard extends React.Component {
                     })}
                 </GridContainer>
               </CardBody>
-              <CardFooter>
-                <GridContainer>
-                  <GridItem xs={10} sm={5} md={8}>
-                    <Button color="primary">Sign UP</Button>
-                  </GridItem>
-                  <GridItem xs={10} sm={5} md={8}>
-                    <a
-                      href="#"
-                      className={classes.cardLink}
-                      onClick={e => e.preventDefault()}
-                    >
-                      alreday have account? Sign In
-                    </a>
-                  </GridItem>
-                </GridContainer>
-              </CardFooter>
             </Card>
           </GridItem>
         </GridContainer>
@@ -141,4 +142,17 @@ class Dashboard extends React.Component {
     );
   }
 }
-export default withStyles(styles)(Dashboard);
+const MapStateToProps = state => {
+  return {
+    user: state.user, // - info po useru
+    polls: state.polls // - vse golosovalki
+  };
+};
+const MapDispatchToProps = dispatch => {
+  return {};
+};
+
+export default connect(
+  MapStateToProps,
+  MapDispatchToProps
+)(Dashboard);

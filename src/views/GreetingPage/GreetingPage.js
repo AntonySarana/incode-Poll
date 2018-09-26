@@ -33,12 +33,11 @@ class GreetingPage extends React.Component {
   }
 
   render() {
-    console.log(this.props.IsAuthorize);
-    const { IsAuthorize } = this.props;
+    const { isAuthorize } = this.props;
     return (
       <React.Fragment>
-        {IsAuthorize && <Dashboard />}
-        {!IsAuthorize && <SignIn />}
+        {isAuthorize && <Dashboard />}
+        {!isAuthorize && <SignIn />}
       </React.Fragment>
     );
   }
@@ -46,7 +45,7 @@ class GreetingPage extends React.Component {
 
 const MapStateToProps = (state) => {
   return{
-    IsAuthorize: state.user.isAuthorize,
+    isAuthorize: state.user.isAuthorize,
   }
 }
 const MapDispatchToProps = (dispatch) => {

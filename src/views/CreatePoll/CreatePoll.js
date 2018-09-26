@@ -80,7 +80,6 @@ class CreatePoll extends React.Component {
   };
   onQuestionEdit = e => {
     let question = e.target.value;
-    console.log(question);
     this.setState({ question });
   };
   onNavBtnClick = (e, index, type) => {
