@@ -143,7 +143,7 @@ class CreatePoll extends React.Component {
                       labelText="question"
                       id="question"
                       onChange={(e) => this.onEditQuestion(e)}
-                      value={this.state.question}
+
                       formControlProps={{
                         fullWidth: true
                       }}

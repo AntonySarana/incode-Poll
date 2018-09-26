@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e47b269-5ea4-4746-83fb-9f7986dbeb0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AddAnswerModal/AddAnswerModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AnswerVariant/AnswerVariant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Poll/Poll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/actionType.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/configureStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/GreetingPage/GreetingPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuoteItem/QouteItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuoteItem/QouteItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/CreatePoll/CreatePoll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/CreatePoll/CreatePoll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Poll/Poll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Poll/Poll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignIn/SignIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Verify/Verify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Verify/Verify.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,10 +31,11 @@
     <session id="214392985">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -35,37 +43,37 @@
           <entry key="SignUp" value="1" />
           <entry key="css" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="16" />
-          <entry key="json" value="2" />
-          <entry key="jsx" value="24" />
+          <entry key="js" value="28" />
+          <entry key="json" value="5" />
+          <entry key="jsx" value="25" />
           <entry key="md" value="2" />
-          <entry key="ts" value="1" />
+          <entry key="ts" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="JSX Harmony" value="24" />
-          <entry key="JavaScript" value="16" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="TypeScript" value="1" />
+          <entry key="JSON" value="5" />
+          <entry key="JSX Harmony" value="25" />
+          <entry key="JavaScript" value="27" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="TypeScript" value="3" />
           <entry key="TypeScript JSX" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="ESLintLanguageService" value="2" />
-          <entry key="TypeScriptServerServiceImpl" value="1" />
+          <entry key="ESLintLanguageService" value="4" />
+          <entry key="TypeScriptServerServiceImpl" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="9" />
-          <entry key="js" value="7176" />
+          <entry key="js" value="9163" />
           <entry key="json" value="5" />
-          <entry key="jsx" value="292" />
+          <entry key="jsx" value="370" />
           <entry key="md" value="4" />
         </counts>
       </usages-collector>
@@ -73,8 +81,8 @@
         <counts>
           <entry key="HTML" value="9" />
           <entry key="JSON" value="5" />
-          <entry key="JSX Harmony" value="292" />
-          <entry key="JavaScript" value="7176" />
+          <entry key="JSX Harmony" value="370" />
+          <entry key="JavaScript" value="9163" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -85,37 +93,43 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/routes/dashboard.jsx">
+            <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-45">
-                  <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+                <state relative-caret-position="435">
+                  <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
                   <folding>
-                    <element signature="e#22#75#0" expanded="true" />
-                    <element signature="e#187#246#0" expanded="true" />
-                    <element signature="e#502#562#0" expanded="true" />
+                    <element signature="e#0#26#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/views/Dashboard/Dashboard.js">
+            <entry file="file://$PROJECT_DIR$/src/store/configureStore.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+                <state relative-caret-position="75">
+                  <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Reducers/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
                   <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                    <element signature="e#118#179#0" expanded="true" />
+                    <element signature="e#0#40#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/views/CreatePoll/CreatePoll.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="145" column="49" lean-forward="true" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
+                <state relative-caret-position="346">
+                  <caret line="145" selection-start-line="145" selection-end-line="145" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                     <element signature="e#104#156#0" expanded="true" />
@@ -125,10 +139,70 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/AnswerVariant/AnswerVariant.js">
+            <entry file="file://$PROJECT_DIR$/src/views/Poll/Poll.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+                <state relative-caret-position="675">
+                  <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#53#114#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Reducers/init.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/views/SignIn/SignIn.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#53#114#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/views/GreetingPage/GreetingPage.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/views/SignUp/SignUp.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="945">
+                  <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#53#114#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/views/Verify/Verify.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="735">
+                  <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#53#114#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -136,13 +210,16 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/CustomInput/CustomInput.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-42">
+                <state relative-caret-position="638">
+                  <caret line="81" column="57" selection-start-line="81" selection-end-line="81" selection-end-column="57" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
+                    <element signature="e#132#193#0" expanded="true" />
+                    <element signature="e#373#418#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -167,18 +244,24 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/views/Verify/Verify.js" />
-        <option value="$PROJECT_DIR$/src/views/SignIn/SignIn.js" />
-        <option value="$PROJECT_DIR$/src/views/SignUp/SignUp.js" />
         <option value="$PROJECT_DIR$/src/components/PollList/PollList.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/views/Poll/Poll.js" />
-        <option value="$PROJECT_DIR$/src/routes/dashboard.jsx" />
         <option value="$PROJECT_DIR$/src/views/Dashboard/Dashboard.js" />
         <option value="$PROJECT_DIR$/src/components/QuoteItem/QouteItem.js" />
         <option value="$PROJECT_DIR$/src/components/AddAnswerModal/AddAnswerModal.js" />
         <option value="$PROJECT_DIR$/src/components/AnswerVariant/AnswerVariant.js" />
         <option value="$PROJECT_DIR$/src/views/CreatePoll/CreatePoll.js" />
+        <option value="$PROJECT_DIR$/src/routes/dashboard.jsx" />
+        <option value="$PROJECT_DIR$/src/views/SignUp/SignUp.js" />
+        <option value="$PROJECT_DIR$/src/views/Verify/Verify.js" />
+        <option value="$PROJECT_DIR$/src/views/Poll/Poll.js" />
+        <option value="$PROJECT_DIR$/src/store/configureStore.js" />
+        <option value="$PROJECT_DIR$/src/actions/actionType.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/Reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/views/GreetingPage/GreetingPage.js" />
+        <option value="$PROJECT_DIR$/src/Reducers/init.js" />
+        <option value="$PROJECT_DIR$/src/views/SignIn/SignIn.js" />
       </list>
     </option>
   </component>
@@ -210,7 +293,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,19 +309,45 @@
               <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Voter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Voter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="CustomInput" type="462c0819:PsiDirectoryNode" />
+              <item name="Reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Voter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Voter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Voter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="GreetingPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Voter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="SignIn" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,15 +391,26 @@
       <option name="presentableId" value="Default" />
       <updated>1537782213123</updated>
       <workItem from="1537782214236" duration="15617000" />
-      <workItem from="1537853814243" duration="24675000" />
+      <workItem from="1537853814243" duration="28615000" />
+      <workItem from="1537940270725" duration="6223000" />
+      <workItem from="1537947633420" duration="1194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40292000" />
+    <option name="totallyTimeSpent" value="51649000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -299,17 +418,17 @@
       <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14246725" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.33054394" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.24895397" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3294979" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="TypeScript" order="5" />
+      <window_info anchor="bottom" id="TypeScript" order="5" weight="0.3294979" />
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3294979" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -323,15 +442,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/views/SignUp/SignUp" />
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/css/material-dashboard-react.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2891" />
@@ -339,11 +449,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/jss/material-dashboard-react.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2651">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-2651" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/jss/material-dashboard-react/components/tableStyle.jsx">
@@ -376,24 +482,7 @@
     <entry file="file://$PROJECT_DIR$/.eslintrc.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Verify/Verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
-          <folding>
-            <element signature="e#53#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Dashboard/Dashboard2.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/views/SignUp/SignUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -416,21 +505,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/jss/material-dashboard-react/components/cardHeaderStyle.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Table/Table.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -445,43 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#176#237#0" expanded="true" />
-            <element signature="e#606#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/index.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/dashboard.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#22#75#0" expanded="true" />
-            <element signature="e#187#246#0" expanded="true" />
-            <element signature="e#502#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Poll/Poll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="47" column="19" lean-forward="true" selection-end-line="52" selection-end-column="40" />
-          <folding>
-            <element signature="e#53#114#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -489,19 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="34" />
-          <folding>
-            <element signature="e#53#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/SignIn/SignIn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="90" selection-start-line="90" selection-end-line="90" selection-end-column="42" />
-          <folding>
-            <element signature="e#53#114#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -515,17 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Dashboard/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#118#179#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CustomButtons/Button.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-465" />
@@ -534,14 +553,8 @@
     <entry file="file://$PROJECT_DIR$/src/assets/jss/material-dashboard-react/components/cardStyle.jsx">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CustomInput/CustomInput.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/routes/index.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AnswerVariant/AnswerVariant.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -550,13 +563,152 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/dashboard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+          <folding>
+            <element signature="e#22#75#0" expanded="true" />
+            <element signature="e#187#246#0" expanded="true" />
+            <element signature="e#502#562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Dashboard/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actionType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Poll/Poll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+          <folding>
+            <element signature="e#53#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/SignUp/SignUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+          <folding>
+            <element signature="e#53#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Verify/Verify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <folding>
+            <element signature="e#53#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CustomInput/CustomInput.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="81" column="57" selection-start-line="81" selection-end-line="81" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#132#193#0" expanded="true" />
+            <element signature="e#373#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/configureStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/CreatePoll/CreatePoll.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="145" column="49" lean-forward="true" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
+        <state relative-caret-position="346">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#104#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Reducers/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/GreetingPage/GreetingPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/SignIn/SignIn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+          <folding>
+            <element signature="e#53#114#0" expanded="true" />
           </folding>
         </state>
       </provider>

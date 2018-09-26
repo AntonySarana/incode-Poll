@@ -13,6 +13,8 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
 import Table from "components/Table/Table.jsx";
 
+import {connect} from "react-redux";
+
 const styles = {
   cardCategoryWhite: {
     color: "rgba(255,255,255,.62)",
@@ -45,9 +47,24 @@ function Poll (props) {
             Please, enter your email and password</p>
         </CardHeader>
         <CardBody>
+          <p>
+            {this.props.poll.question}
+          </p>
+          <Table>
+            {props.map((item,index) => {
+              this.props.poll.answers;
+            })}
+          </Table>
         </CardBody>
       </Card>
     </div>
   )
 }
-export default withStyles(styles)(Poll);
+
+const mapStateToProps = (state) => {
+  return{
+    poll: this.props.poll,
+  }
+}
+
+export default connect(mapStateToProps)(Poll);

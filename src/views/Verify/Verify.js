@@ -11,6 +11,7 @@ import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
+import TextField from "@material-ui/core/TextField/TextField";
 
 const styles = {
   cardCategoryWhite: {
@@ -48,20 +49,22 @@ function Verify (props) {
             <CardBody>
               <GridContainer>
                 <GridItem xs={10} sm={5} md={8}>
-                  <CustomInput
-                    labelText = "email adress"
-                    id = "email"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
+                  <TextField
+                    id="standard-dense"
+                    label="Email"
+                    className="dense"
+                    margin="email"
+                    fullWidth
+
                   />
                 </GridItem>
                 <GridItem xs={10} sm={5} md={8}>
-                  <CustomInput
-                    labelText = "Verify code"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
+                  <TextField
+                    id="standard-dense"
+                    label="Verify-Code"
+                    className="dense"
+                    margin="verify-code"
+                    fullWidth
                   />
                 </GridItem>
               </GridContainer>

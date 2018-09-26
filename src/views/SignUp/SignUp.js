@@ -11,6 +11,7 @@ import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
+import TextField from "@material-ui/core/TextField/TextField";
 
 const styles = {
   cardCategoryWhite: {
@@ -48,33 +49,32 @@ function SignUp (props) {
             <CardBody>
               <GridContainer>
                 <GridItem xs={10} sm={4} md={8}>
-                  <CustomInput
-                    labelText = "email adress"
-
-                    id = "email"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
+                  <TextField
+                    id="standard-dense"
+                    label="Email"
+                    className="dense"
+                    margin="email"
+                    fullWidth
                   />
                 </GridItem>
                 <GridItem xs={10} sm={4} md={8}>
-                  <CustomInput
-                    labelText = "pass"
-
-
-                    formControlProps={{
-                      fullWidth: true
-                    }}
+                  <TextField
+                    id="standard-dense"
+                    label="Password"
+                    className="dense"
+                    margin="Password"
+                    fullWidth
+                    type="Password"
                   />
                 </GridItem>
                 <GridItem xs={10} sm={4} md={8}>
-                  <CustomInput
-                    labelText = "repeat pass"
-
-
-                    formControlProps={{
-                      fullWidth: true
-                    }}
+                  <TextField
+                    id="standard-dense"
+                    label="Repeat-Password"
+                    className="dense"
+                    margin="Password"
+                    fullWidth
+                    type="Password"
                   />
                 </GridItem>
               </GridContainer>

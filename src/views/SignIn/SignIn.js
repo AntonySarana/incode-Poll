@@ -11,6 +11,9 @@ import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
+import TextField from '@material-ui/core/TextField';
+
+
 
 const styles = {
   cardCategoryWhite: {
@@ -32,36 +35,35 @@ const styles = {
 };
 
 
-function SignIn (props) {
-  const {classes} = props;
+export default function SignIn (props) {
   return (
     <div>
       <GridContainer>
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Register with another APP</h4>
-              <p className={classes.cardCategoryWhite}>
+              <h4 className="cardTitleWhite">
+                Sign into Voter App</h4>
+              <p className="cardCategoryWhite">
                 Please, enter your email and password</p>
             </CardHeader>
             <CardBody>
               <GridContainer>
-                <GridItem xs={10} sm={5} md={8}>
-                  <CustomInput
-                    labelText = "email adress"
-                    id = "email"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
+                <GridItem xs={10} sm={10} md={8}>
+                  <TextField
+                    label="Email"
+                    className="dense"
+                    margin="dense"
+                    fullWidth
                   />
                 </GridItem>
-                <GridItem xs={10} sm={5} md={8}>
-                  <CustomInput
-                    labelText = "pass"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
+                <GridItem xs={10} sm={10} md={8}>
+                  <TextField
+                    label="Password"
+                    className="dense"
+                    margin="dense"
+                    fullWidth
+                    type="Password"
                   />
                 </GridItem>
               </GridContainer>
@@ -74,7 +76,7 @@ function SignIn (props) {
                 <GridItem xs={10} sm={5} md={8}>
                   <a
                     href="#"
-                    className={classes.cardLink}
+                    className="cardLink"
                     onClick={(e)=>e.preventDefault()}
                   >
                     first time user? Sign Up
@@ -88,4 +90,4 @@ function SignIn (props) {
     </div>
   )
 }
-export default withStyles(styles)(SignIn);
+

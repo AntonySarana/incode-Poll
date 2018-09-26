@@ -13,6 +13,7 @@ import SignUp from "views/SignUp/SignUp.js";
 import SignIn from "views/SignIn/SignIn.js";
 import Verify from "views/Verify/Verify.js";
 import CreatePoll from "views/CreatePoll/CreatePoll.js";
+import GreetingPage from "views/GreetingPage/GreetingPage.js";
 
 const dashboardRoutes = [
   {
@@ -49,6 +50,13 @@ const dashboardRoutes = [
     navbarName: "CreatePoll",
     icon: Person,
     component: CreatePoll,
+  },
+  {
+    path: "/GreetingPage",
+    sidebarName: "GreetingPage",
+    navbarName: "GreetingPage",
+    icon: Person,
+    component: GreetingPage,
   },
 
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
