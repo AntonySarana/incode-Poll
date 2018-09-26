@@ -22,6 +22,9 @@ import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import AnswerVariant from "../../components/AnswerVariant/AnswerVariant.js";
 
+import {connect} from "react-redux";
+import addNewPoll from "../../actions/addNewPoll.js";
+
 const styles = {
   cardCategoryWhite: {
     color: "rgba(255,255,255,.62)",
@@ -64,10 +67,20 @@ class CreatePoll extends React.Component {
       alert("nujno bolshe zolota");
       return;
     }
+    let question = this.state.question;
+    let answers= this.state.answers.map((item,index)=>{
+       return Object.assign({},item,{answerID:index},{count:0});
+    });
+    let Poll = {
+      question,
+      answers,
+      /*author,data,   ---  po-xoroshemu i eto mojno*/
+    }
+    this.props.CreateNewPoll(Poll);
   };
-  onEditQuestion = e => {
+  onQuestionEdit = e => {
     let question = e.target.value;
-    console.log(e);
+    console.log(question);
     this.setState({ question });
   };
   onNavBtnClick = (e, index, type) => {
@@ -131,22 +144,23 @@ class CreatePoll extends React.Component {
           <GridItem xs={12} sm={2} md={10}>
             <Card>
               <CardHeader color="primary">
-                <h4 className={classes.cardTitleWhite}>Create new Poll</h4>
-                <p className={classes.cardCategoryWhite}>
+                <h4 className="cardTitleWhite">Create new Poll</h4>
+                <p className="cardCategoryWhite">
                   Please, add ur question and answers for polling
                 </p>
               </CardHeader>
               <CardBody>
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={11}>
-                    <CustomInput
-                      labelText="question"
-                      id="question"
-                      onChange={(e) => this.onEditQuestion(e)}
-
-                      formControlProps={{
-                        fullWidth: true
-                      }}
+                    <TextField
+                      autoFocus
+                      margin="dense"
+                      label="Question"
+                      type="answer"
+                      fullWidth={true}
+                      maxWidth="md"
+                      onChange={e => this.onQuestionEdit(e)}
+                      value={question}
                     />
                   </GridItem>
                   <GridItem xs={12} sm={4} md={11}>
@@ -196,7 +210,6 @@ class CreatePoll extends React.Component {
             <TextField
               autoFocus
               margin="dense"
-              id="name"
               label="Edit"
               type="answer"
               fullWidth={true}
@@ -210,7 +223,7 @@ class CreatePoll extends React.Component {
               Cancel
             </Button>
             <Button onClick={this.onModalAccept} color="primary">
-              Subscribe
+              Accept
             </Button>
           </DialogActions>
         </Dialog>
@@ -218,4 +231,15 @@ class CreatePoll extends React.Component {
     );
   }
 }
-export default withStyles(styles)(CreatePoll);
+const MapStateToProps = (state) => {
+  return{
+    IsAuthorize: state.user.isAuthorize,
+  }
+}
+const MapDispatchToProps = (dispatch) => {
+  return {
+   CreateNewPoll: (poll) => dispatch(addNewPoll(poll))
+  }
+}
+
+export default connect(MapStateToProps,MapDispatchToProps)(CreatePoll)
