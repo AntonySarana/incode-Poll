@@ -14,26 +14,6 @@ import TextField from '@material-ui/core/TextField';
 
 
 
-const styles = {
-  cardCategoryWhite: {
-    color: "rgba(255,255,255,.62)",
-    margin: "0",
-    fontSize: "14px",
-    marginTop: "0",
-    marginBottom: "0"
-  },
-  cardTitleWhite: {
-    color: "#FFFFFF",
-    marginTop: "0px",
-    minHeight: "auto",
-    fontWeight: "300",
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    marginBottom: "3px",
-    textDecoration: "none"
-  }
-};
-
-
 export default function SignIn (props) {
   return (
     <div>
@@ -74,9 +54,8 @@ export default function SignIn (props) {
                 </GridItem>
                 <GridItem xs={10} sm={5} md={8}>
                   <a
-                    href="#"
+                    href="/SignUp"
                     className="cardLink"
-                    onClick={(e)=>e.preventDefault()}
                   >
                     first time user? Sign Up
                   </a>

@@ -2,11 +2,6 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 // import ContentPaste from "@material-ui/icons/ContentPaste";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
-import Notifications from "@material-ui/icons/Notifications";
-import Unarchive from "@material-ui/icons/Unarchive";
 // core components/views
 import DashboardPage from "../views/Dashboard/Dashboard.js";
 import SignUp from "views/SignUp/SignUp.js";
@@ -14,6 +9,7 @@ import SignIn from "views/SignIn/SignIn.js";
 import Verify from "views/Verify/Verify.js";
 import CreatePoll from "views/CreatePoll/CreatePoll.js";
 import GreetingPage from "views/GreetingPage/GreetingPage.js";
+import Poll from "views/Poll/Poll.js";
 
 const dashboardRoutes = [
   {
@@ -29,6 +25,7 @@ const dashboardRoutes = [
     navbarName: "Profile",
     icon: Person,
     component: SignUp,
+    invisible: true
   },
   {
     path: "/SignIn",
@@ -36,6 +33,7 @@ const dashboardRoutes = [
     navbarName: "Profile",
     icon: Person,
     component: SignIn,
+    invisible: true
   },
   {
     path: "/Verify",
@@ -43,6 +41,7 @@ const dashboardRoutes = [
     navbarName: "Profile",
     icon: Person,
     component: Verify,
+    invisible: true
   },
   {
     path: "/CreatePoll",
@@ -58,8 +57,15 @@ const dashboardRoutes = [
     icon: Person,
     component: GreetingPage,
   },
+  {
+    path: "/Poll",
+    sidebarName: "Poll",
+    navbarName: "Poll",
+    icon: Person,
+    component: Poll,
+  },
 
-  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+  { redirect: true, path: "/", to: "/GreetingPage", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;

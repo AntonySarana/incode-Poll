@@ -2,7 +2,7 @@ import React from "react";
 
 // import vsyakoy figni
 
-import withStyles from "@material-ui/core/styles/withStyles";
+
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
@@ -10,40 +10,21 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+
 import TextField from "@material-ui/core/TextField/TextField";
 
-const styles = {
-  cardCategoryWhite: {
-    color: "rgba(255,255,255,.62)",
-    margin: "0",
-    fontSize: "14px",
-    marginTop: "0",
-    marginBottom: "0"
-  },
-  cardTitleWhite: {
-    color: "#FFFFFF",
-    marginTop: "0px",
-    minHeight: "auto",
-    fontWeight: "300",
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    marginBottom: "3px",
-    textDecoration: "none"
-  }
-};
 
 
-function Verify (props) {
-  const {classes} = props;
+export default function Verify (props) {
   return (
     <div>
       <GridContainer>
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
+              <h4 className="cardTitleWhite">
                 Register with another APP</h4>
-              <p className={classes.cardCategoryWhite}>
+              <p className="cardCategoryWhite">
                 Please, enter your email and password</p>
             </CardHeader>
             <CardBody>
@@ -53,7 +34,7 @@ function Verify (props) {
                     id="standard-dense"
                     label="Email"
                     className="dense"
-                    margin="email"
+                    margin="dense"
                     fullWidth
 
                   />
@@ -63,7 +44,7 @@ function Verify (props) {
                     id="standard-dense"
                     label="Verify-Code"
                     className="dense"
-                    margin="verify-code"
+                    margin="dense"
                     fullWidth
                   />
                 </GridItem>
@@ -77,7 +58,7 @@ function Verify (props) {
                 <GridItem xs={10} sm={5} md={8}>
                   <a
                     href="#"
-                    className={classes.cardLink}
+                    className="cardLink"
                     onClick={(e)=>e.preventDefault()}
                   >
                     first time user? Sign Up
@@ -91,4 +72,3 @@ function Verify (props) {
     </div>
   )
 }
-export default withStyles(styles)(Verify);

@@ -3,11 +3,9 @@ import { NavLink } from "react-router-dom";
 
 // import vsyakoy figni
 
-import withStyles from "@material-ui/core/styles/withStyles";
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -16,25 +14,7 @@ import Table from "@material-ui/core/Table";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import connect from "react-redux/es/connect/connect";
-
-const styles = {
-  cardCategoryWhite: {
-    color: "rgba(255,255,255,.62)",
-    margin: "0",
-    fontSize: "14px",
-    marginTop: "0",
-    marginBottom: "0"
-  },
-  cardTitleWhite: {
-    color: "#FFFFFF",
-    marginTop: "0px",
-    minHeight: "auto",
-    fontWeight: "300",
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    marginBottom: "3px",
-    textDecoration: "none"
-  }
-};
+import SelectPoll from "../../actions/selectPoll.js";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -42,16 +22,17 @@ class Dashboard extends React.Component {
     this.state = {
       dataVoted: ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
       dataNotVoted: ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
-      isViewNew: true
+      isViewNew: true,
     };
-  }
-  componentDidMount() {
+  };
+
+  /*componentDidMount() {
     this.onFilterClick();
-  }
+  }*/
 
   onFilterClick = () => {
     let isViewNew = !this.state.isViewNew;
-
+    this.setState({isViewNew});
     // --- pri poyavlenii BD
     /*let polls = this.props.polls
     let voted = this.props.user.pollVoted // - massiv ID vsex progolosovannix
@@ -62,12 +43,16 @@ class Dashboard extends React.Component {
         if (poll.id === id) return dataVoted.push(poll)
         else return dataNotVoted.push(poll);
       })
-    })*/
+    })
 
-    this.setState({ isViewNew /*dataVoted,dataNotVoted,*/ });
+    this.setState({ isViewNew /*dataVoted,dataNotVoted, });*/
   };
+  onPollClick = (e, poll) => {
+    console.log(poll);
+    this.props.selectPoll(poll);
+  };
+
   render() {
-    const { classes } = this.props;
     const { isViewNew, dataVoted, dataNotVoted } = this.state;
     return (
       <div>
@@ -110,7 +95,11 @@ class Dashboard extends React.Component {
                           <Table>
                             <TableRow>
                               <TableCell>
-                                <QouteItem data={item} key={key} />
+                                <QouteItem
+                                  data={item}
+                                  key={key}
+                                  onPollClick={this.onPollClick}
+                                />
                               </TableCell>
                             </TableRow>
                           </Table>
@@ -126,7 +115,11 @@ class Dashboard extends React.Component {
                           <Table>
                             <TableRow>
                               <TableCell>
-                                <QouteItem data={item} key={key} />
+                                <QouteItem
+                                  data={item}
+                                  key={key}
+                                  onPollClick={this.onPollClick}
+                                />
                               </TableCell>
                             </TableRow>
                           </Table>
@@ -149,7 +142,9 @@ const MapStateToProps = state => {
   };
 };
 const MapDispatchToProps = dispatch => {
-  return {};
+  return {
+  selectPoll: (poll) => dispatch(SelectPoll(poll)),
+  };
 };
 
 export default connect(

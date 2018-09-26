@@ -1,6 +1,5 @@
 import React from "react";
 
-import withStyles from "@material-ui/core/styles/withStyles";
 // for Dialog
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
@@ -16,33 +15,13 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
 import Table from "@material-ui/core/Table";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import AnswerVariant from "../../components/AnswerVariant/AnswerVariant.js";
 
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import addNewPoll from "../../actions/addNewPoll.js";
-
-const styles = {
-  cardCategoryWhite: {
-    color: "rgba(255,255,255,.62)",
-    margin: "0",
-    fontSize: "14px",
-    marginTop: "0",
-    marginBottom: "0"
-  },
-  cardTitleWhite: {
-    color: "#FFFFFF",
-    marginTop: "0px",
-    minHeight: "auto",
-    fontWeight: "300",
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    marginBottom: "3px",
-    textDecoration: "none"
-  }
-};
 
 class CreatePoll extends React.Component {
   constructor(props) {
@@ -68,15 +47,16 @@ class CreatePoll extends React.Component {
       return;
     }
     let question = this.state.question;
-    let answers= this.state.answers.map((item,index)=>{
-       return Object.assign({},item,{answerID:index},{count:0});
+    let answers = this.state.answers.map((item, index) => {
+      return Object.assign({}, item, { answerID: index }, { count: 0 });
     });
     let Poll = {
       question,
-      answers,
+      answers
       /*author,data,   ---  po-xoroshemu i eto mojno*/
-    }
+    };
     this.props.CreateNewPoll(Poll);
+    this.props.history.push("/Dashboard");
   };
   onQuestionEdit = e => {
     let question = e.target.value;
@@ -230,15 +210,18 @@ class CreatePoll extends React.Component {
     );
   }
 }
-const MapStateToProps = (state) => {
-  return{
-    IsAuthorize: state.user.isAuthorize,
-  }
-}
-const MapDispatchToProps = (dispatch) => {
+const MapStateToProps = state => {
   return {
-   CreateNewPoll: (poll) => dispatch(addNewPoll(poll))
-  }
-}
+    IsAuthorize: state.user.isAuthorize
+  };
+};
+const MapDispatchToProps = dispatch => {
+  return {
+    CreateNewPoll: poll => dispatch(addNewPoll(poll))
+  };
+};
 
-export default connect(MapStateToProps,MapDispatchToProps)(CreatePoll)
+export default connect(
+  MapStateToProps,
+  MapDispatchToProps
+)(CreatePoll);
