@@ -1,16 +1,31 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Define collection and schema for Post
+
+let answer = new Schema({
+  text: {
+    type: String
+  },
+  id_a: {
+    type: Number
+  },
+  count: {
+    type: Number
+  }
+});
+
+
 let Post = new Schema(
   {
     question: {
       type: String
     },
     answers: {
-      type: Array
+      type: [answer]
     },
-
+    id_p: {
+      type: Number
+    }
   },
   {
     collection: "polls"

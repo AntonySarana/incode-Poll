@@ -29,15 +29,19 @@ class Dashboard extends React.Component {
     };
   };
 
-  componentDidMount() {
-    return this.props.getAllPollsAction(true);
-    const dataVoted = this.props.polls;
-    this.setState({dataVoted,});
+  componentDidMount () {
+    console.log(this.props.polls);
+    this.props.getAllPollsAction().then(data=>{
+      const dataVoted = this.props.polls;
+      this.setState({dataVoted,});
+      }
+    );
   }
 
   onFilterClick = () => {
     let isViewNew = !this.state.isViewNew;
     this.setState({isViewNew});
+
     // --- pri poyavlenii BD
     /*let polls = this.props.polls
     let voted = this.props.user.pollVoted // - massiv ID vsex progolosovannix
@@ -53,8 +57,8 @@ class Dashboard extends React.Component {
     this.setState({ isViewNew /*dataVoted,dataNotVoted, });*/
   };
   onPollClick = (e, poll) => {
-    console.log(poll);
     this.props.selectPoll(poll);
+    this.props.history.push("/Poll");
   };
 
   render() {
@@ -113,7 +117,6 @@ class Dashboard extends React.Component {
                     })}
 
                   {!isViewNew &&
-                    /*this.props.polls.map....*/
                     dataVoted.map((item, key) => {
                       return (
                         <GridItem xs={12} sm={2} md={12}>
@@ -131,7 +134,6 @@ class Dashboard extends React.Component {
                         </GridItem>
                       );
                     })}
-                  {this.props.isFetching && <p>Zagruzka...</p> }
                 </GridContainer>
               </CardBody>
             </Card>
@@ -145,12 +147,11 @@ const MapStateToProps = state => {
   return {
     user: state.user, // - info po useru
     polls: state.voters.polls, // - vse golosovalki
-    isFetching: state.voters.isFetching
   };
 };
 const MapDispatchToProps = dispatch => {
   return {
-  getAllPollsAction: (year) => dispatch(getAllPolls(year)),
+  getAllPollsAction: () => dispatch(getAllPolls()),
   selectPoll: (poll) => dispatch(SelectPoll(poll)),
   };
 };

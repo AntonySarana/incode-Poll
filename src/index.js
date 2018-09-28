@@ -4,6 +4,7 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import ConfigureStore from "./store/configureStore.js";
+import {getAllPolls} from "./actions/getAllPolls.js";
 
 import "assets/css/material-dashboard-react.css?v=1.5.0";
 
@@ -11,6 +12,7 @@ import indexRoutes from "routes/index.jsx";
 
 const hist = createBrowserHistory();
 const store = ConfigureStore();
+store.dispatch(getAllPolls())
 
 ReactDOM.render(
   <Provider store={store}>

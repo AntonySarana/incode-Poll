@@ -11,6 +11,7 @@ import Button from "components/CustomButtons/Button.jsx";
 
 export default function QouteItem (props) {
   const { data } = props;
+  console.log(data);
   return (
     <React.Fragment>
       <GridContainer>
@@ -19,7 +20,7 @@ export default function QouteItem (props) {
                   color="gray"
                   fullWidth={true}
                   onClick = {(e, item = props.data)=>props.onPollClick(e, item)}
-                >{data}</Button>
+                >{data.question}</Button>
         </GridItem>
       </GridContainer>
     </React.Fragment>

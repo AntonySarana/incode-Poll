@@ -3,7 +3,7 @@ const app = express();
 const PostRoute = express.Router();
 
 // Require Post model in our routes module
-let Post = require('../models/Post');
+let Post = require('../models/Poll');
 
 // Defined store route
 PostRoute.route('/add').post(function (req, res) {
@@ -30,11 +30,25 @@ PostRoute.route('/voters').get(function (req, res) {
 });
 
 // Defined delete | remove | destroy route
+PostRoute.route('/voters/:id').get(function (req, res) {
+  Post.findById({_id: req.params.id}, function(err, post){
+    if(err) res.json(err);
+    else {
+      res.json(req.params.id);
+    }
+  });
+});
+
 PostRoute.route('/delete/:id').get(function (req, res) {
   Post.findByIdAndRemove({_id: req.params.id}, function(err, post){
     if(err) res.json(err);
-    else res.json(req.params.id);
+    else {
+      res.json(req.params.id);
+    }
   });
 });
+
+
+
 
 module.exports = PostRoute;

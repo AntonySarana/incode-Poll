@@ -18,9 +18,9 @@ export function getAllPolls() {
 
 
 
-export const allPolls = (polls) => {
+export const allPolls = (payload) => {
   return {
     type: GET_ALL_POLLS_SUCCESS,
-    payload:polls,
+    payload,
   }
 };

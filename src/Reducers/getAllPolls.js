@@ -7,7 +7,8 @@ export default function getAllPolls(state = [], action) {
       return { ...state, year: action.payload, isFetching: true }
 
     case GET_ALL_POLLS_SUCCESS:
-      return { ...state, polls: action.payload, isFetching: false }
+      const polls = action.payload
+      return  { ...state, polls}
 
     default:
       return state
