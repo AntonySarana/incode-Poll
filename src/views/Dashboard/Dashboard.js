@@ -15,6 +15,9 @@ import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import connect from "react-redux/es/connect/connect";
 import SelectPoll from "../../actions/selectPoll.js";
+import { GET_ALL_POLLS_REQUEST, GET_ALL_POLLS_SUCCESS } from '../../actions/actionType';
+import { getAllPolls } from "../../actions/getAllPolls";
+
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -26,9 +29,9 @@ class Dashboard extends React.Component {
     };
   };
 
-  /*componentDidMount() {
-    this.onFilterClick();
-  }*/
+  componentDidMount() {
+    return this.props.getAllPollsAction(true);
+  }
 
   onFilterClick = () => {
     let isViewNew = !this.state.isViewNew;
@@ -126,6 +129,7 @@ class Dashboard extends React.Component {
                         </GridItem>
                       );
                     })}
+                  {this.props.isFetching && <p>Zagruzka...</p> }
                 </GridContainer>
               </CardBody>
             </Card>
@@ -138,11 +142,13 @@ class Dashboard extends React.Component {
 const MapStateToProps = state => {
   return {
     user: state.user, // - info po useru
-    polls: state.polls // - vse golosovalki
+    polls: state.selectPoll, // - vse golosovalki
+    isFetching: state.voters.isFetching
   };
 };
 const MapDispatchToProps = dispatch => {
   return {
+  getAllPollsAction: (year) => dispatch(getAllPolls(year)),
   selectPoll: (poll) => dispatch(SelectPoll(poll)),
   };
 };

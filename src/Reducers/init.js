@@ -4,5 +4,11 @@ export default (state=[] ,action) => {
   const user={
     isAuthorize:false,
   }
-  return Object.assign({},state,user)
+  const voters={
+    isFetching:false
+  };
+  const selectPoll={
+
+  }
+  return {...state,user,voters,selectPoll}
 }
