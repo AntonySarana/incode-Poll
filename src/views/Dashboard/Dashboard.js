@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataVoted: ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
+      dataVoted: []/*["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"]*/,
       dataNotVoted: ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
       isViewNew: true,
     };
@@ -31,6 +31,8 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     return this.props.getAllPollsAction(true);
+    const dataVoted = this.props.polls;
+    this.setState({dataVoted,});
   }
 
   onFilterClick = () => {
@@ -142,7 +144,7 @@ class Dashboard extends React.Component {
 const MapStateToProps = state => {
   return {
     user: state.user, // - info po useru
-    polls: state.selectPoll, // - vse golosovalki
+    polls: state.voters.polls, // - vse golosovalki
     isFetching: state.voters.isFetching
   };
 };
