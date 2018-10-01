@@ -25,6 +25,9 @@ let Post = new Schema(
     },
     id_p: {
       type: Number
+    },
+    count:{
+      type:Number
     }
   },
   {

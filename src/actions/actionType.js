@@ -2,6 +2,7 @@ export const AUTHORIZE = 'AUTHORIZE';
 export const NOTIFICATION = 'NOTIFICATION';
 export const STATE_INIT = 'STATE_INIT';
 export const ADD_NEW_POLL = 'ADD_NEW_POLL';
+export const MAKE_CHOISE = 'MAKE_CHOISE';
 export const SELECT_POLL = 'SELECT_POLL';
 export const GET_ALL_POLLS_REQUEST = 'GET_ALL_POLLS_REQUEST'
 export const GET_ALL_POLLS_SUCCESS = 'GET_ALL_POLLS_SUCCESS'

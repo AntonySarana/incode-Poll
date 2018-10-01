@@ -6,27 +6,29 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import PollItem from "../../components/PollItem/PollItem";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
+import {makeChoise} from "../../actions/makeChoise";
 
 
 class Poll extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pollCount: 5
+
     };
   }
-  onAnswerClick = (e,item) => {
-    console.log(item);
+  onAnswerClick = (e, item) => {
+
+    let choise = {
+      id_a: item.id_a,
+      id_p:this.props.poll.id_p,
+    }
+    console.log(choise);
+    this.props.makeChoiseAction(choise)
+
   };
   componentDidMount() {
-    let pollCount;
-    this.props.poll.answers.map(item => {
-      pollCount=1;
-      return (pollCount);
-    });
-    this.setState({pollCount});
-    console.log(this.state.pollCount);
+
   }
   render() {
     const { poll } = this.props;
@@ -43,11 +45,14 @@ class Poll extends React.Component {
           <CardBody>
             <h3>{poll.question}</h3>
             {poll.answers.map((item, key) => {
-              return <PollItem
-                poll={item}
-                key={key}
-                onAnswerClick={this.onAnswerClick}
-              />
+              return (
+                <PollItem
+                  answer={item}
+                  key={key}
+                  count = {poll.count}
+                  onAnswerClick={this.onAnswerClick}
+                />
+              );
             })}
           </CardBody>
         </Card>
@@ -61,5 +66,10 @@ const mapStateToProps = state => {
     poll: state.selectPoll
   };
 };
+const mapDispatchToProps = dispatch => {
+  return {
+    makeChoiseAction: choise => dispatch(makeChoise(choise))
+  }
+}
 
-export default connect(mapStateToProps)(Poll);
+export default connect(mapStateToProps,mapDispatchToProps)(Poll);

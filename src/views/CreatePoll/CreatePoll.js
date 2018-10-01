@@ -52,7 +52,8 @@ class CreatePoll extends React.Component {
     });
     let Poll = {
       question,
-      answers
+      answers,
+      count: 0,
       /*author,data,   ---  po-xoroshemu i eto mojno*/
     };
     this.props.CreateNewPoll(Poll);

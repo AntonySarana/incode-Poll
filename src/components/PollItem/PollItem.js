@@ -6,7 +6,9 @@ import TableCell from "@material-ui/core/TableCell/TableCell";
 import React from "react";
 
 export default function PollItem(props) {
-  const {poll} = props
+  const {answer} = props;
+  var diagram = Math.round((answer.count/props.count)*100);
+  if (!diagram) diagram=0;
   return (
     <Table >
       <TableCell>
@@ -15,15 +17,21 @@ export default function PollItem(props) {
             xs={12}
             sm={12}
             md={7}
-            onClick={(e,poll= props.poll) => props.onAnswerClick(e,poll)}
+            onClick={(e,answer = props.answer) => props.onAnswerClick(e,answer)}
           >
-            {poll.text}
+            {answer.text}
           </GridItem>
           <GridItem xs={12} sm={12} md={2}>
-            {poll.count}
+            {answer.count}
           </GridItem>
           <GridItem xs={12} sm={12} md={3}>
-            <div style={{}}>{}</div>
+            <div style={{
+              color:"white",
+              textAlign:"center",
+              "border-radius": 5,
+              "background-color": "blue",
+              width: `${diagram ? diagram : 30}%`,
+            }}>{`${diagram? diagram : 0} %`}</div>
           </GridItem>
         </GridContainer>
       </TableCell>

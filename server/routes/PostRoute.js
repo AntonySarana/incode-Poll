@@ -1,14 +1,15 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const PostRoute = express.Router();
 
 // Require Post model in our routes module
-let Post = require('../models/Poll');
+let Post = require("../models/Poll");
 
 // Defined store route
-PostRoute.route('/add').post(function (req, res) {
+PostRoute.route("/add").post(function(req, res) {
   let post = new Post(req.body);
-  post.save()
+  post
+    .save()
     .then(post => {
       res.status(200).json(post);
     })
@@ -18,37 +19,37 @@ PostRoute.route('/add').post(function (req, res) {
 });
 
 // Defined get data(index or listing) route
-PostRoute.route('/voters').get(function (req, res) {
-  Post.find(function (err, posts){
-    if(err){
+PostRoute.route("/voters").get(function(req, res) {
+  Post.find(function(err, posts) {
+    if (err) {
       console.log(err);
-    }
-    else {
+    } else {
       res.json(posts);
     }
   });
 });
 
-// Defined delete | remove | destroy route
-PostRoute.route('/voters/:id').get(function (req, res) {
-  Post.findById({_id: req.params.id}, function(err, post){
-    if(err) res.json(err);
+PostRoute.route("/voters/:idp::ida").put(function(req, res) {
+  Post.updateOne(
+    { id_p: req.params.idp, 'answers.id_a': req.params.ida},
+    { $inc: { 'answers.$.count': 1,count:1 } },
+    { returnOriginal: false },
+    function(err, posts) {
+      if (err) res.json(err);
+      else {
+        res.json(posts);
+      }
+    }
+  );
+});
+
+PostRoute.route("/delete/:id").get(function(req, res) {
+  Post.findByIdAndRemove({ _id: req.params.id }, function(err, post) {
+    if (err) res.json(err);
     else {
       res.json(req.params.id);
     }
   });
 });
-
-PostRoute.route('/delete/:id').get(function (req, res) {
-  Post.findByIdAndRemove({_id: req.params.id}, function(err, post){
-    if(err) res.json(err);
-    else {
-      res.json(req.params.id);
-    }
-  });
-});
-
-
-
 
 module.exports = PostRoute;
