@@ -54,7 +54,7 @@ class CreatePoll extends React.Component {
       question,
       answers,
       count: 0,
-      id_p: Math.max(this.props.allVoters.map(item=>item.id_p)),
+      id_p: Math.max.apply(Math,this.props.allVoters.map(item=>item.id_p))+1,
     };
     console.log(Poll);
     this.props.CreateNewPoll(Poll);
@@ -190,6 +190,7 @@ class CreatePoll extends React.Component {
             <DialogContentText>Here u can edit your answer:</DialogContentText>
             <TextField
               autoFocus
+
               margin="dense"
               label="Edit"
               type="answer"

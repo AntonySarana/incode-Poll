@@ -6,6 +6,7 @@ import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 
 import Icon from "@material-ui/core/Icon/Icon";
+import CustomInput from "../CustomInput/CustomInput";
 
 const styles = {
   cardCategoryWhite: {

@@ -7,8 +7,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 let Post = require("../models/Poll");
 
 // Defined store route
-PostRoute.route("/voters/newPoll:poll").post(function(req, res) {
-  let post = new Post(req.params.poll);
+PostRoute.route("/voters/newPoll/").post(function(req, res) {
+  let post = new Post(req.body);
   post
     .save()
     .then(post => {

@@ -16,7 +16,7 @@ const apiUrl = 'http://localhost:3001/voters';
 
 export function addNewPoll(poll) {
   return (dispatch) => {
-    return axios.post(`${apiUrl}/newPoll/${poll}`)
+    return axios.post(`${apiUrl}/newPoll/`,poll)
       .then(response => {
         dispatch(addNewPollSucces(response.data))
       })
@@ -25,19 +25,6 @@ export function addNewPoll(poll) {
       });
   };
 };
-/*
-export function putNewPoll(poll) {
-  return (dispatch) => {
-    return axios.update(`${apiUrl}/newPoll/${poll}`)
-      .then(response => {
-        dispatch(addNewPollSucces(response.data))
-      })
-      .catch(error => {
-        throw(error);
-      });
-  };
-}*/
-
 
 
 export const addNewPollSucces = (payload) => {
