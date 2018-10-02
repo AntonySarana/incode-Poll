@@ -21,7 +21,7 @@ import TableRow from "@material-ui/core/TableRow";
 import AnswerVariant from "../../components/AnswerVariant/AnswerVariant.js";
 
 import { connect } from "react-redux";
-import addNewPoll from "../../actions/addNewPoll.js";
+import {addNewPoll} from "../../actions/addNewPoll.js";
 
 class CreatePoll extends React.Component {
   constructor(props) {
@@ -48,14 +48,15 @@ class CreatePoll extends React.Component {
     }
     let question = this.state.question;
     let answers = this.state.answers.map((item, index) => {
-      return Object.assign({}, item, { answerID: index }, { count: 0 });
+      return Object.assign({}, item, { id_a: index }, { count: 0 });
     });
     let Poll = {
       question,
       answers,
       count: 0,
-      /*author,data,   ---  po-xoroshemu i eto mojno*/
+      id_p: Math.max(this.props.allVoters.map(item=>item.id_p)),
     };
+    console.log(Poll);
     this.props.CreateNewPoll(Poll);
     this.props.history.push("/Dashboard");
   };
@@ -213,7 +214,8 @@ class CreatePoll extends React.Component {
 }
 const MapStateToProps = state => {
   return {
-    IsAuthorize: state.user.isAuthorize
+    IsAuthorize: state.user.isAuthorize,
+    allVoters:state.voters.polls,
   };
 };
 const MapDispatchToProps = dispatch => {

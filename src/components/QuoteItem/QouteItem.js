@@ -11,7 +11,6 @@ import Button from "components/CustomButtons/Button.jsx";
 
 export default function QouteItem (props) {
   const { data } = props;
-  console.log(data);
   return (
     <React.Fragment>
       <GridContainer>

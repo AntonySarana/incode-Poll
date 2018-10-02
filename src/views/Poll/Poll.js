@@ -8,7 +8,7 @@ import CardBody from "components/Card/CardBody.jsx";
 import PollItem from "../../components/PollItem/PollItem";
 import { connect } from "react-redux";
 import {makeChoise} from "../../actions/makeChoise";
-
+import {getOnePoll} from "../../actions/selectPoll";
 
 class Poll extends React.Component {
   constructor(props) {
@@ -21,20 +21,20 @@ class Poll extends React.Component {
 
     let choise = {
       id_a: item.id_a,
-      id_p:this.props.poll.id_p,
+      id_p: this.props.poll.id_p,
     }
-    console.log(choise);
-    this.props.makeChoiseAction(choise)
-
+    this.props.makeChoiseAction(choise).then(data=>
+    this.props.getOnePollAction(this.props.poll.id_p));
   };
   componentDidMount() {
 
   }
   render() {
     const { poll } = this.props;
+
     return (
       <div>
-        {!poll._id && this.props.history.push("/Dashboard")}
+        {!this.props.poll.id_p && this.props.history.push("/Dashboard")}
         <Card>
           <CardHeader color="primary">
             <h4 className="cardTitleWhite">This is Poll result</h4>
@@ -44,7 +44,7 @@ class Poll extends React.Component {
           </CardHeader>
           <CardBody>
             <h3>{poll.question}</h3>
-            {poll.answers.map((item, key) => {
+            {this.props.poll.answers && this.props.poll.answers.map((item, key) => {
               return (
                 <PollItem
                   answer={item}
@@ -68,7 +68,8 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    makeChoiseAction: choise => dispatch(makeChoise(choise))
+    makeChoiseAction: choise => dispatch(makeChoise(choise)),
+    getOnePollAction: id_p => dispatch(getOnePoll(id_p))
   }
 }
 

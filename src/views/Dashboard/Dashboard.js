@@ -14,8 +14,7 @@ import Table from "@material-ui/core/Table";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import connect from "react-redux/es/connect/connect";
-import SelectPoll from "../../actions/selectPoll.js";
-import { GET_ALL_POLLS_REQUEST, GET_ALL_POLLS_SUCCESS } from '../../actions/actionType';
+import {selectPoll} from "../../actions/selectPoll.js";
 import { getAllPolls } from "../../actions/getAllPolls";
 
 
@@ -23,7 +22,7 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataVoted: []/*["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"]*/,
+      dataVoted: [],
       dataNotVoted: ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
       isViewNew: true,
     };
@@ -63,6 +62,7 @@ class Dashboard extends React.Component {
 
   render() {
     const { isViewNew, dataVoted, dataNotVoted } = this.state;
+    console.log(this.props)
     return (
       <div>
         <GridContainer>
@@ -152,7 +152,7 @@ const MapStateToProps = state => {
 const MapDispatchToProps = dispatch => {
   return {
   getAllPollsAction: () => dispatch(getAllPolls()),
-  selectPoll: (poll) => dispatch(SelectPoll(poll)),
+  selectPoll: (poll) => dispatch(selectPoll(poll)),
   };
 };
 
