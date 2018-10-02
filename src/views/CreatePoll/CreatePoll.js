@@ -22,6 +22,7 @@ import AnswerVariant from "../../components/AnswerVariant/AnswerVariant.js";
 
 import { connect } from "react-redux";
 import {addNewPoll} from "../../actions/addNewPoll.js";
+import { getAllPolls } from "../../actions/getAllPolls";
 
 class CreatePoll extends React.Component {
   constructor(props) {
@@ -58,6 +59,7 @@ class CreatePoll extends React.Component {
     };
     console.log(Poll);
     this.props.CreateNewPoll(Poll);
+    this.props.getAllPollsAction()
     this.props.history.push("/Dashboard");
   };
   onQuestionEdit = e => {
@@ -222,6 +224,7 @@ const MapStateToProps = state => {
 const MapDispatchToProps = dispatch => {
   return {
     CreateNewPoll: poll => dispatch(addNewPoll(poll))
+    getAllPollsAction: () => dispatch(getAllPolls()),
   };
 };
 
