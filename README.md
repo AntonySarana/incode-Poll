@@ -1,3 +1,12 @@
+## Test
+- for begin testint my project write next
+
+[npm run server-start]
+
+- u will run react-server localhost:3000,
+- and expressJS-server on localhost:3001,
+- for remote DB used [mLab]
+
 
 ## Resources
 - Demo: https://demos.creative-tim.com/material-dashboard-react
@@ -12,15 +21,5 @@
 
 - Copyright 2018 Creative Tim (https://www.creative-tim.com)
 - Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
-
-## Useful Links
-
-More products from Creative Tim: <https://www.creative-tim.com/products>
-
-Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
-
-Freebies: <https://www.creative-tim.com/products>
-
-Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new>
 
 

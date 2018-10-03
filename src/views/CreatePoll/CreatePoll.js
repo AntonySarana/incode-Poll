@@ -223,7 +223,7 @@ const MapStateToProps = state => {
 };
 const MapDispatchToProps = dispatch => {
   return {
-    CreateNewPoll: poll => dispatch(addNewPoll(poll))
+    CreateNewPoll: poll => dispatch(addNewPoll(poll)),
     getAllPollsAction: () => dispatch(getAllPolls()),
   };
 };
