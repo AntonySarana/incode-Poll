@@ -1,11 +1,11 @@
-## Test
-- for begin testint my project write next
 
-[npm run server-start]
+## Start
+
+    npm run server-start
 
 - u will run react-server localhost:3000,
 - and expressJS-server on localhost:3001,
-- for remote DB used [mLab]
+- for remote DB used [mLab](https://mlab.com/)
 
 
 ## Resources
