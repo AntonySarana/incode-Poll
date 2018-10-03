@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e47b269-5ea4-4746-83fb-9f7986dbeb0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Reducers/authReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Reducers/errorReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/authentication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/is-empty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setAuthToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/UserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/UserRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validation/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validation/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/validation/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/validation/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignIn/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignUp/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Verify/Verify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Verify/Verify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/DB.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/DB.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,7 +34,7 @@
           <entry key="eslintignore" value="1" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="3" />
-          <entry key="js" value="194" />
+          <entry key="js" value="195" />
           <entry key="json" value="13" />
           <entry key="jsx" value="38" />
           <entry key="md" value="5" />
@@ -67,7 +48,7 @@
           <entry key="HTML" value="3" />
           <entry key="JSON" value="14" />
           <entry key="JSX Harmony" value="38" />
-          <entry key="JavaScript" value="186" />
+          <entry key="JavaScript" value="187" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="5" />
@@ -84,7 +65,7 @@
         <counts>
           <entry key="gitignore" value="41" />
           <entry key="html" value="9" />
-          <entry key="js" value="20766" />
+          <entry key="js" value="20768" />
           <entry key="json" value="84" />
           <entry key="jsx" value="954" />
           <entry key="md" value="196" />
@@ -95,7 +76,7 @@
           <entry key="HTML" value="9" />
           <entry key="JSON" value="84" />
           <entry key="JSX Harmony" value="954" />
-          <entry key="JavaScript" value="20643" />
+          <entry key="JavaScript" value="20645" />
           <entry key="PLAIN_TEXT" value="360" />
         </counts>
       </usages-collector>
@@ -211,11 +192,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/routes/UserRoute.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-138">
+                <state relative-caret-position="38">
                   <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/server/config/DB.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -293,7 +283,6 @@
         <option value="$PROJECT_DIR$/src/views/CreatePoll/CreatePoll.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/server/config/DB.js" />
         <option value="$PROJECT_DIR$/server/validation/is-empty.js" />
         <option value="$PROJECT_DIR$/server/passport.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -314,6 +303,7 @@
         <option value="$PROJECT_DIR$/server/validation/login.js" />
         <option value="$PROJECT_DIR$/server/routes/UserRoute.js" />
         <option value="$PROJECT_DIR$/server/validation/register.js" />
+        <option value="$PROJECT_DIR$/server/config/DB.js" />
       </list>
     </option>
   </component>
@@ -358,6 +348,12 @@
               <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Voter" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Voter" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Voter" type="b2602c69:ProjectViewProjectNode" />
@@ -468,12 +464,12 @@
       <workItem from="1538373584501" duration="24177000" />
       <workItem from="1538460186813" duration="12842000" />
       <workItem from="1538478416581" duration="8771000" />
-      <workItem from="1538546279559" duration="18802000" />
+      <workItem from="1538546279559" duration="19060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173181000" />
+    <option name="totallyTimeSpent" value="173439000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -493,7 +489,7 @@
       <window_info active="true" content_ui="combo" x="116" y="122" width="261" height="718" id="Project" order="2" visible="true" weight="0.14246725" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.43096235" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.24686192" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3294979" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -759,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/DB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/SignIn/SignIn.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -878,8 +867,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/UserRoute.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
+        <state relative-caret-position="38">
           <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/DB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
