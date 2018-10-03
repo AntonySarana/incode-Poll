@@ -11,37 +11,19 @@ import CreatePoll from "views/CreatePoll/CreatePoll.js";
 import GreetingPage from "views/GreetingPage/GreetingPage.js";
 import Poll from "views/Poll/Poll.js";
 
-const dashboardRoutes = [
+export const dashboardRoutes = [
   {
     path: "/dashboard",
     sidebarName: "Dashboard",
     navbarName: "Material Dashboard",
     icon: Dashboard,
     component: DashboardPage
-  },
-  {
-    path: "/SignUp",
-    sidebarName: "SignUp",
-    navbarName: "Profile",
-    icon: Person,
-    component: SignUp,
-    invisible: true
-  },
-  {
-    path: "/SignIn",
-    sidebarName: "SignIn",
-    navbarName: "Profile",
-    icon: Person,
-    component: SignIn,
-    invisible: true
-  },
-  {
+  },{
     path: "/Verify",
     sidebarName: "Verify",
     navbarName: "Profile",
     icon: Person,
     component: Verify,
-    invisible: true
   },
   {
     path: "/CreatePoll",
@@ -51,13 +33,6 @@ const dashboardRoutes = [
     component: CreatePoll,
   },
   {
-    path: "/GreetingPage",
-    sidebarName: "GreetingPage",
-    navbarName: "GreetingPage",
-    icon: Person,
-    component: GreetingPage,
-  },
-  {
     path: "/Poll",
     sidebarName: "Poll",
     navbarName: "Poll",
@@ -65,7 +40,33 @@ const dashboardRoutes = [
     component: Poll,
   },
 
-  { redirect: true, path: "/", to: "/GreetingPage", navbarName: "Redirect" }
+  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+];
+export const guestRoutes = [
+  {
+    path: "/SignUp",
+    sidebarName: "SignUp",
+    navbarName: "Profile",
+    icon: Person,
+    component: SignUp,
+  },
+  {
+    path: "/SignIn",
+    sidebarName: "SignIn",
+    navbarName: "Profile",
+    icon: Person,
+    component: SignIn,
+  },
+
+/*  {
+    path: "/GreetingPage",
+    sidebarName: "GreetingPage",
+    navbarName: "GreetingPage",
+    icon: Person,
+    component: GreetingPage,
+  },*/
+
+  { redirect: true, path: "/", to: "/SignIn", navbarName: "Redirect" }
 ];
 
-export default dashboardRoutes;
+/*export default dashboardRoutes;*/

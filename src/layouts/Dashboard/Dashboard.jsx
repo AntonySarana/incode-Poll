@@ -12,24 +12,36 @@ import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import {dashboardRoutes,guestRoutes} from "../../routes/dashboard.jsx";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/layouts/dashboardStyle.jsx";
 
 import image from "assets/img/sidebar-2.jpg";
 import logo from "assets/img/reactlogo.png";
-import connect from "react-redux/es/connect/connect";
+import {connect} from "react-redux";
 
-const switchRoutes = (
+
+
+
+const guestLink = (
   <Switch>
-    {dashboardRoutes.map((prop, key) => {
+    {guestRoutes.map((prop, key) => {
       if (prop.redirect)
         return <Redirect from={prop.path} to={prop.to} key={key} />;
-      /*if(prop.invisible) return null;*/
       return <Route path={prop.path} component={prop.component} key={key} />;
     })}
   </Switch>
 );
+const authLink = (
+  <Switch>
+    {dashboardRoutes.map((prop, key) => {
+      if (prop.redirect)
+        return <Redirect from={prop.path} to={prop.to} key={key} />;
+      return <Route path={prop.path} component={prop.component} key={key} />;
+    })}
+  </Switch>
+);
+
 
 class App extends React.Component {
   constructor(props) {
@@ -68,11 +80,15 @@ class App extends React.Component {
     window.removeEventListener("resize", this.resizeFunction);
   }
   render() {
+    const {isAuthenticated, user} = this.props.auth;
     const { classes, ...rest } = this.props;
+    var switchRoutes,sideRouters;
+    if (isAuthenticated) {switchRoutes= authLink, sideRouters= dashboardRoutes}
+    else {switchRoutes= guestLink,sideRouters=guestRoutes}
     return (
       <div className={classes.wrapper}>
         <Sidebar
-          routes={dashboardRoutes}
+          routes={sideRouters}
           logoText={"Voter"}
           logo={logo}
           image={image}
@@ -83,7 +99,7 @@ class App extends React.Component {
         />
         <div className={classes.mainPanel} ref="mainPanel">
           <Header
-            routes={dashboardRoutes}
+            routes={sideRouters}
             handleDrawerToggle={this.handleDrawerToggle}
             {...rest}
           />
@@ -106,4 +122,14 @@ App.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(dashboardStyle)(App) ;
+const mapStateToProps = state => {
+  return{
+    auth: state.auth,
+  }
+};
+const mapDispatchToProps = dispatch =>{
+  return{
+  }
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(withStyles(dashboardStyle)(App)) ;

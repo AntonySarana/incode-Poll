@@ -23,7 +23,7 @@ app.use(cors());
 const port = process.env.PORT || 3001;
 
 app.use('/', postroutes);
-app.use('/', userroutes);
+app.use('/users', userroutes);
 
 const server = app.listen(port, function(){
   console.log('Listening on port ' + port);
