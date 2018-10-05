@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e47b269-5ea4-4746-83fb-9f7986dbeb0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/userChoise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/DB.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/DB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/UserRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/UserRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actionType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PollItem/PollItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PollItem/PollItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Poll/Poll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Poll/Poll.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,7 +33,7 @@
           <entry key="babelrc" value="1" />
           <entry key="css" value="2" />
           <entry key="eslintignore" value="1" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="html" value="3" />
           <entry key="js" value="223" />
           <entry key="json" value="13" />
@@ -59,7 +50,7 @@
           <entry key="JSON" value="14" />
           <entry key="JSX Harmony" value="44" />
           <entry key="JavaScript" value="214" />
-          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="PLAIN_TEXT" value="18" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="5" />
           <entry key="TypeScript JSX" value="1" />
@@ -73,7 +64,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gitignore" value="41" />
+          <entry key="gitignore" value="48" />
           <entry key="html" value="9" />
           <entry key="js" value="23114" />
           <entry key="json" value="84" />
@@ -87,7 +78,7 @@
           <entry key="JSON" value="84" />
           <entry key="JSX Harmony" value="1116" />
           <entry key="JavaScript" value="22972" />
-          <entry key="PLAIN_TEXT" value="379" />
+          <entry key="PLAIN_TEXT" value="386" />
         </counts>
       </usages-collector>
     </session>
@@ -205,7 +196,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/PollItem/PollItem.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="128">
@@ -213,6 +204,15 @@
                   <folding>
                     <element signature="e#1#53#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
                 </state>
               </provider>
             </entry>
@@ -267,7 +267,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/server/validation/is-empty.js" />
         <option value="$PROJECT_DIR$/server/passport.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/is-empty.js" />
         <option value="$PROJECT_DIR$/src/setAuthToken.js" />
         <option value="$PROJECT_DIR$/src/Reducers/index.js" />
@@ -293,6 +292,7 @@
         <option value="$PROJECT_DIR$/src/actions/authentication.js" />
         <option value="$PROJECT_DIR$/src/views/Poll/Poll.js" />
         <option value="$PROJECT_DIR$/src/components/PollItem/PollItem.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -425,12 +425,12 @@
       <workItem from="1538460186813" duration="12842000" />
       <workItem from="1538478416581" duration="8771000" />
       <workItem from="1538546279559" duration="21554000" />
-      <workItem from="1538717989205" duration="23441000" />
+      <workItem from="1538717989205" duration="23642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199374000" />
+    <option name="totallyTimeSpent" value="199575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -516,13 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -853,6 +846,13 @@
           <folding>
             <element signature="e#1#53#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
