@@ -31,7 +31,8 @@ router.post("/register", function(req, res) {
       const newUser = new User({
         /*name: req.body.name,*/
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        iVoted:[],
         /*avatar*/
       });
 
@@ -71,7 +72,9 @@ router.route("/login").post(function(req, res) {
     bcrypt.compare(password, user.password).then(isMatch => {
       if (isMatch) {
         const payload = {
-          id: user.id
+          id: user.id,
+          email: user.email,
+          iVoted: user.iVoted,
           /*name: user.name,
               avatar: user.avatar*/
         };
@@ -106,7 +109,7 @@ router.get(
     return res.json({
       id: req.user.id,
       /*name: req.user.name,*/
-      email: req.user.email
+      email: req.user.email,
     });
   }
 );

@@ -11,7 +11,7 @@ export const registerUser = (user, history) => dispatch => {
     .catch(err => {
       dispatch({
         type: GET_ERRORS,
-        payload: err.response.data
+        //payload: err.response.data
       });
     });
 }
@@ -42,5 +42,5 @@ export const logoutUser = (history) => dispatch => {
   localStorage.removeItem('jwtToken');
   setAuthToken(false);
   dispatch(setCurrentUser({}));
-  history.push('/login');
+  //history.push('/login');
 }

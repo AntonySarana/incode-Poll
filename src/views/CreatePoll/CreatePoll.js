@@ -217,7 +217,7 @@ class CreatePoll extends React.Component {
 }
 const MapStateToProps = state => {
   return {
-    IsAuthorize: state.user.isAuthorize,
+    isAuthenticated: state.auth.isAuthenticated,
     allVoters:state.voters.polls,
   };
 };
