@@ -1,25 +1,34 @@
 
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
-import Table from "@material-ui/core/Table/Table";
-import TableCell from "@material-ui/core/TableCell/TableCell";
+import Divider from '@material-ui/core/Divider';
 import React from "react";
+import Button from '@material-ui/core/Button';
+
 
 export default function PollItem(props) {
-  const {answer} = props;
+  const {answer,isVoteEnabled,voted} = props;
   var diagram = Math.round((answer.count/props.count)*100);
-  if (!diagram) diagram=0;
+  if (!diagram) diagram= 0;
   return (
-    <Table >
-      <TableCell>
-        <GridContainer>
+    <div>
+      <Divider/>
+        <GridContainer
+          alignItems= "center"
+          color="red"
+        >
           <GridItem
             xs={12}
             sm={12}
             md={7}
-            onClick={(e,answer = props.answer) => props.onAnswerClick(e,answer)}
+            //style={{"background-color":`${}}`}}
           >
-            {answer.text}
+            <Button
+              fullWidth="true"
+              disabled={isVoteEnabled}
+              variant={voted? 'contained':""}
+              onClick={(e,answer = props.answer) => props.onAnswerClick(e,answer)}
+            >{answer.text}</Button>
           </GridItem>
           <GridItem xs={12} sm={12} md={2}>
             {answer.count}
@@ -34,7 +43,7 @@ export default function PollItem(props) {
             }}>{`${diagram? diagram : 0} %`}</div>
           </GridItem>
         </GridContainer>
-      </TableCell>
-    </Table>
+      <Divider/>
+    </div>
   );
 }

@@ -14,46 +14,45 @@ import Table from "@material-ui/core/Table";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import connect from "react-redux/es/connect/connect";
-import {selectPoll} from "../../actions/selectPoll.js";
+import { selectPoll } from "../../actions/selectPoll.js";
 import { getAllPolls } from "../../actions/getAllPolls";
-
 
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       dataVoted: [],
-      dataNotVoted: ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
-      isViewNew: true,
+      dataNotVoted: [],
+      isViewNew: true
     };
-  };
+  }
 
-  componentDidMount () {
-    console.log(this.props.polls);
-    this.props.getAllPollsAction().then(data=>{
-      const dataVoted = this.props.polls;
+  componentDidMount() {
+    this.props.getAllPollsAction().then(data => {
+      /*const dataVoted = this.props.polls;
       this.setState({dataVoted,});
-      }
-    );
+      */
+      const polls = this.props.polls;
+      const voted = this.props.user.iVoted; // - massiv ID vsex progolosovannix
+      let dataVoted = [];
+      let dataNotVoted = [];
+      if (voted.length===0) dataVoted = this.props.polls
+       else ( polls.map(poll => {
+        voted.map(vote => {
+          poll.id_p === vote.id_p ? dataVoted.push(poll) :dataNotVoted.push(poll)
+          console.log(dataVoted);
+          console.log(dataNotVoted);
+          return (dataVoted, dataNotVoted)
+        });
+      }))
+      this.setState({ dataVoted, dataNotVoted });
+    });
   }
 
   onFilterClick = () => {
     let isViewNew = !this.state.isViewNew;
-    this.setState({isViewNew});
+    this.setState({ isViewNew });
 
-    // --- pri poyavlenii BD
-    /*let polls = this.props.polls
-    let voted = this.props.user.pollVoted // - massiv ID vsex progolosovannix
-    let dataVoted=[];
-    let dataNotVoted=[];
-    polls.map(poll=>{
-      voted.map(id => {
-        if (poll.id === id) return dataVoted.push(poll)
-        else return dataNotVoted.push(poll);
-      })
-    })
-
-    this.setState({ isViewNew /*dataVoted,dataNotVoted, });*/
   };
   onPollClick = (e, poll) => {
     this.props.selectPoll(poll);
@@ -62,7 +61,6 @@ class Dashboard extends React.Component {
 
   render() {
     const { isViewNew, dataVoted, dataNotVoted } = this.state;
-    console.log(this.props)
     return (
       <div>
         <GridContainer>
@@ -133,7 +131,9 @@ class Dashboard extends React.Component {
                           </Table>
                         </GridItem>
                       );
-                    })}
+                    })
+                  }
+
                 </GridContainer>
               </CardBody>
             </Card>
@@ -145,14 +145,14 @@ class Dashboard extends React.Component {
 }
 const MapStateToProps = state => {
   return {
-    user: state.user, // - info po useru
-    polls: state.voters.polls, // - vse golosovalki
+    user: state.auth.user, // - info po useru
+    polls: state.voters.polls // - vse golosovalki
   };
 };
 const MapDispatchToProps = dispatch => {
   return {
-  getAllPollsAction: () => dispatch(getAllPolls()),
-  selectPoll: (poll) => dispatch(selectPoll(poll)),
+    getAllPollsAction: () => dispatch(getAllPolls()),
+    selectPoll: poll => dispatch(selectPoll(poll))
   };
 };
 

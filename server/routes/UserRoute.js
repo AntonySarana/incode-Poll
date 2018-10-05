@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const gravatar = require("gravatar");
+const app = express()
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const validateRegisterInput = require("../validation/register");
 const validateLoginInput = require("../validation/login");
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const User = require("../models/User");
 
@@ -32,7 +34,7 @@ router.post("/register", function(req, res) {
         /*name: req.body.name,*/
         email: req.body.email,
         password: req.body.password,
-        iVoted:[],
+        iVoted: []
         /*avatar*/
       });
 
@@ -74,7 +76,7 @@ router.route("/login").post(function(req, res) {
         const payload = {
           id: user.id,
           email: user.email,
-          iVoted: user.iVoted,
+          iVoted: user.iVoted
           /*name: user.name,
               avatar: user.avatar*/
         };
@@ -110,8 +112,25 @@ router.get(
       id: req.user.id,
       /*name: req.user.name,*/
       email: req.user.email,
+      iVoted: req.user.isVoted,
     });
   }
 );
-
+router.route("/choise/:idu::idp::ida").put(function(req, res) {
+  let id_p = req.params.idp;
+  let id_a = req.params.ida;
+  console.log(req.params.idu);
+  User.findByIdAndUpdate (
+     req.params.idu,
+    { $push: { iVoted: { "id_p": id_p,"id_a": id_a} } },
+    { new: true },
+    function(err, posts) {
+      if (err) res.json(err);
+      else {
+        console.log(posts);
+        res.json(posts);
+      }
+    }
+  );
+});
 module.exports = router;
