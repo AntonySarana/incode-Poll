@@ -37,9 +37,17 @@ class SignUp extends React.Component{
       password,
       password_confirm,
     }
-    this.props.registerUserAction(user,this.props.history);
+    this.props.registerUserAction(user, this.props.history);
   }
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.errors) {
+        this.setState({
+            errors: nextProps.errors
+        });
+    }
+}
   render(){
+    const {errors}= this.state
   return (
     <div>
       <GridContainer>
@@ -63,6 +71,7 @@ class SignUp extends React.Component{
                     fullWidth
                     onChange={this.onTypeText}
                   />
+                  {errors.email && (<div style={{color:"red"}} >{errors.email}</div>)}
                 </GridItem>
                 <GridItem xs={10} sm={4} md={8}>
                   <TextField
@@ -75,6 +84,7 @@ class SignUp extends React.Component{
                     type="Password"
                     value={this.state.password}
                   />
+                  {errors.password && (<div style={{color:"red"}} >{errors.password}</div>)}
                 </GridItem>
                 <GridItem xs={10} sm={4} md={8}>
                   <TextField
@@ -87,6 +97,7 @@ class SignUp extends React.Component{
                     fullWidth
                     type="Password"
                   />
+                  {errors.password_confirm && (<div style={{color:"red"}} >{errors.password_confirm}</div>)}
                 </GridItem>
               </GridContainer>
             </CardBody>
@@ -100,7 +111,7 @@ class SignUp extends React.Component{
                     href="/SignIn"
                     className="cardLink"
                   >
-                    alreday have account? Sign In
+                    already have account? Sign In
                   </a>
                 </GridItem>
               </GridContainer>
@@ -113,14 +124,14 @@ class SignUp extends React.Component{
     </div>
   )}
 }
-const mapStateToProps = store => {
+const mapStateToProps = state => {
   return {
-
+    errors: state.errors
   }
 }
 const mapDispatchToProps = dispatch => {
   return{
-    registerUserAction: user => dispatch(registerUser(user))
+    registerUserAction: (user,history) => dispatch(registerUser(user,history))
   }
 }
 

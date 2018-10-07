@@ -7,8 +7,8 @@ module.exports = function validateRegisterInput(data) {
   data.password = !isEmpty(data.password) ? data.password : '';
   data.password_confirm = !isEmpty(data.password_confirm) ? data.password_confirm : '';
 
-
-  /*if(!Validator.isEmail(data.email)) {
+ 
+  if(!Validator.isEmail(data.email)) {
     errors.email = 'Email is invalid';
   }
 
@@ -34,8 +34,8 @@ module.exports = function validateRegisterInput(data) {
 
   if(Validator.isEmpty(data.password_confirm)) {
     errors.password_confirm = 'Password is required';
-  }*/
-
+  }
+ 
   return {
     errors,
     isValid: isEmpty(errors)

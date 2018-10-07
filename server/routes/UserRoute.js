@@ -21,7 +21,7 @@ router.post("/register", function(req, res) {
     email: req.body.email
   }).then(user => {
     if (user) {
-      return res.status(404).json({
+      return res.status(400).json({
         email: "Email already exists"
       });
     } else {
@@ -69,7 +69,7 @@ router.route("/login").post(function(req, res) {
   User.findOne({ email }).then(user => {
     if (!user) {
       errors.email = "User not found";
-      return res.status(404).json(errors);
+      return res.status(400).json(errors);
     }
     bcrypt.compare(password, user.password).then(isMatch => {
       if (isMatch) {

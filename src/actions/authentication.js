@@ -9,10 +9,11 @@ export const registerUser = (user, history) => dispatch => {
   axios.post(`${apiUrl}/register`, user)
     .then(res => history.push('/login'))
     .catch(err => {
-      dispatch({
+       dispatch({
         type: GET_ERRORS,
         payload: err.response.data
       });
+      /* throw(err) */
     });
 }
 
