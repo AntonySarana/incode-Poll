@@ -1,8 +1,18 @@
+## Install
+
+    npm i
+    cd server
+    npm i
 
 ## Start
 
     npm run server-start
+    
+ and if you use VScode:
 
+    npm start
+    node server/server.js
+    
 - u will run react-server localhost:3000,
 - and expressJS-server on localhost:3001,
 - for remote DB used [mLab](https://mlab.com/)
