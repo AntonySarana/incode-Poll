@@ -40,11 +40,11 @@ class CreatePoll extends React.Component {
   }
   onOK = () => {
     if (!this.state.question) {
-      alert("vvedite vopros");
+      alert("Enter ur question");
       return;
     }
     if (this.state.answers.length == 1) {
-      alert("nujno bolshe zolota");
+      alert("you need at least 2 answers");
       return;
     }
     let question = this.state.question;

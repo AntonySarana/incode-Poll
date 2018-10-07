@@ -32,10 +32,18 @@ class Poll extends React.Component {
   };
   componentDidMount() {
     let isVoteEnabled = this.props.user.iVoted.filter(item=>item.id_p === this.props.poll.id_p)
-    console.log(isVoteEnabled);
     this.setState({isVoteEnabled:isVoteEnabled[0]});
 
   }
+   componentWillReceiveProps(nextProps) {
+    if(nextProps.user.iVoted) {
+     const isVoteEnabled = nextProps.user.iVoted.find(item=>item.id_p === this.props.poll.id_p)
+      if (this.props.poll.id_p)
+        this.setState({
+          isVoteEnabled: isVoteEnabled
+        });
+    }
+}  
   render() {
     const { poll,user } = this.props;
     const {isVoteEnabled} = this.state;

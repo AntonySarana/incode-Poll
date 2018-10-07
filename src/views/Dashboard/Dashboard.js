@@ -23,30 +23,35 @@ class Dashboard extends React.Component {
     this.state = {
       dataVoted: [],
       dataNotVoted: [],
-      isViewNew: true
+      isViewNew: true,
+      iVoted:[]
     };
   }
-
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.user.iVoted) {
+        this.setState({
+          iVoted: nextProps.user.iVoted
+        });
+    }
+}  
   componentDidMount() {
     this.props.getAllPollsAction().then(data => {
-      /*const dataVoted = this.props.polls;
-      this.setState({dataVoted,});
-      */
-      const polls = this.props.polls;
-      const voted = this.props.user.iVoted; // - massiv ID vsex progolosovannix
+      const voted = this.state.iVoted; // - massiv ID vsex progolosovannix
       let dataVoted = [];
-      let dataNotVoted = [];
-      if (voted.length===0) dataVoted = this.props.polls
-       else ( polls.map(poll => {
-        voted.map(vote => {
-          poll.id_p === vote.id_p ? dataVoted.push(poll) :dataNotVoted.push(poll)
-          console.log(dataVoted);
-          console.log(dataNotVoted);
-          return (dataVoted, dataNotVoted)
-        });
-      }))
+      let dataNotVoted = this.props.polls.slice();
+      if (voted && voted.length===0) console.log(1)/* dataNotVoted = this.props.polls */
+        else (voted.map(vote => {
+          for (let i=0;i < dataNotVoted.length;i++)
+          {
+            if (vote.id_p === dataNotVoted[i].id_p) {
+              dataVoted.push(dataNotVoted[i]);
+              dataNotVoted.splice(i,i+1);
+              return;
+            }
+          }
+        }))       
       this.setState({ dataVoted, dataNotVoted });
-    });
+    })
   }
 
   onFilterClick = () => {

@@ -119,7 +119,6 @@ router.get(
 router.route("/choise/:idu::idp::ida").put(function(req, res) {
   let id_p = req.params.idp;
   let id_a = req.params.ida;
-  console.log(req.params.idu);
   User.findByIdAndUpdate (
      req.params.idu,
     { $push: { iVoted: { "id_p": id_p,"id_a": id_a} } },
@@ -127,7 +126,6 @@ router.route("/choise/:idu::idp::ida").put(function(req, res) {
     function(err, posts) {
       if (err) res.json(err);
       else {
-        console.log(posts);
         res.json(posts);
       }
     }

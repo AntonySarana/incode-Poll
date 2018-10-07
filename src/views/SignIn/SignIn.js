@@ -39,8 +39,15 @@ class SignIn extends React.Component {
     }
     this.props.loginUserAction(user);
   }
-
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.errors) {
+        this.setState({
+            errors: nextProps.errors
+        });
+    }
+}
   render() {
+    const {errors}= this.state
     return (
       <div>
         <GridContainer>
@@ -62,8 +69,9 @@ class SignIn extends React.Component {
                       margin="dense"
                       fullWidth
                       onChange={this.onTypeText}
-                      /*alue={this.state.email}*/
+                      value={this.state.email}
                     />
+                    {errors.email && (<div style={{color:"red"}} >{errors.email}</div>)}
                   </GridItem>
                   <GridItem xs={10} sm={10} md={8}>
                     <TextField
@@ -76,6 +84,7 @@ class SignIn extends React.Component {
                       onChange={this.onTypeText}
                       value={this.state.password}
                     />
+                    {errors.password && (<div style={{color:"red"}} >{errors.password}</div>)}
                   </GridItem>
                 </GridContainer>
               </CardBody>
@@ -101,9 +110,9 @@ class SignIn extends React.Component {
     )
   }
 }
-  const mapStateToProps = store => {
+  const mapStateToProps = state => {
   return {
-
+    errors: state.errors
   }
 }
   const mapDispatchToProps = dispatch => {

@@ -18,13 +18,13 @@ export const dashboardRoutes = [
     navbarName: "Material Dashboard",
     icon: Dashboard,
     component: DashboardPage
-  },{
+  },/* {
     path: "/Verify",
     sidebarName: "Verify",
     navbarName: "Profile",
     icon: Person,
     component: Verify,
-  },
+  }, */
   {
     path: "/CreatePoll",
     sidebarName: "CreatePoll",
